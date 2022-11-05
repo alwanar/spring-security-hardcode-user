@@ -1,0 +1,133 @@
+public Map<String, Object> validation( CoveringValidationDTO validationDTO) {
+
+        List<String> requestError = new ArrayList<>();
+        Map<String, Object> response = new HashMap<>();
+
+        if (validationDTO.getFIDProgram() == null) requestError.add("FIDProgram");
+        if (validationDTO.getNamaProgram() == null) requestError.add("NamaProgram");
+        if (validationDTO.getFIDKategoriAsuransi() == null) requestError.add("FIDKategoriAsuransi");
+        if (validationDTO.getFIDJenisAsuransi() == null) requestError.add("FIDJenisAsuransi");
+        if (validationDTO.getNomorRekeningPinjaman() == null) requestError.add("NomorRekeningPinjaman");
+        if (validationDTO.getCIFRekeningPinjaman() == null) requestError.add("CIFRekeningPinjama");
+        if (validationDTO.getLoanType() == null) requestError.add("LoanType");
+        if (validationDTO.getLoanTypeDesc() == null) requestError.add("LoanTypeDes");
+        if (validationDTO.getJangkaWaktuBulan() == null) requestError.add("JangkaWaktuBulan");
+        if (validationDTO.getJangkaWaktuPilihan() == null) requestError.add("JangkaWaktuPilihan");
+        if (validationDTO.getSukuBungaPinjamanTahun() == null) requestError.add("SukuBungaPinjamanTahun");
+        if (validationDTO.getPlafon() == null) requestError.add("Plafon");
+        if (validationDTO.getOutstanding() == null) requestError.add("Outstanding");
+        if (validationDTO.getTotalEksposure() == null) requestError.add("TotalEksposure");
+        if (validationDTO.getFlagCorona() == null) requestError.add("FlagCorona");
+        if (validationDTO.getFlagRestruk() == null) requestError.add("FlagRestruk");
+        if (validationDTO.getKolektabilitas() == null) requestError.add("Kolektabilitas");
+        if (validationDTO.getTanggalAkadKreditRestruk() == null) requestError.add("TanggalAkadKreditRestruk");
+        if (validationDTO.getTanggalKreditRestruk() == null) requestError.add("TanggalKreditRestruk");
+        if (validationDTO.getTanggalAkadKredit() == null) requestError.add("TanggalAkadKredit");
+        if (validationDTO.getTanggalRealisasi() == null) requestError.add("TanggalRealisasi");
+        if (validationDTO.getTanggalJatuhTempo() == null) requestError.add("TanggalJatuhTempo");
+        if (validationDTO.getTanggalPembentukanRekening() == null) requestError.add("TanggalPembentukanRekening");
+        if (validationDTO.getUnitCode() == null) requestError.add("UnitCode");
+        if (validationDTO.getUnitDesc() == null) requestError.add("UnitDesc");
+        if (validationDTO.getBranchCode() == null) requestError.add("BranchCode");
+        if (validationDTO.getBranchDesc() == null) requestError.add("BranchDesc");
+        if (validationDTO.getRegionCode() == null) requestError.add("RegionCode");
+        if (validationDTO.getRegionDesc() == null) requestError.add("RegionDesc");
+        if (validationDTO.getMakerBranch() == null) requestError.add("MakerBranch");
+        if (validationDTO.getMakerID() == null) requestError.add("MakerID");
+        if (validationDTO.getNomerPerjanjianKredit() == null) requestError.add("NomorPerjanjianKredit");
+        if (validationDTO.getNilaiLikuiditas() == null) requestError.add("NilaiLikuiditas");
+        if (validationDTO.getSektorEkonomi() == null) requestError.add("SektorEkonomi");
+        if (validationDTO.getFIDKategoriJenisFasilitas() == null) requestError.add("FIDKategoriJenisFasilitas");
+        if (validationDTO.getNamaPeserta() == null) requestError.add("NamaPeserta");
+        if (validationDTO.getNomorIdentitas() == null) requestError.add("NomorIdentitas");
+        if (validationDTO.getNPWP() == null) requestError.add("NPWP");
+        if (validationDTO.getEmail() == null) requestError.add("Email");
+        if (validationDTO.getTanggalLahir() == null) requestError.add("TanggalLahir");
+        if (validationDTO.getFIDJenisKelamin() == null) requestError.add("FIDJenisKelamin");
+        if (validationDTO.getJenisKelamin() == null) requestError.add("JenisKelamin");
+        if (validationDTO.getFIDPendidikan() == null) requestError.add("FIDPendidikan");
+        if (validationDTO.getPendidikan() == null) requestError.add("Pendidikan");
+        if (validationDTO.getFIDPekerjaan() == null) requestError.add("FIDPekerjaan");
+        if (validationDTO.getPekerjaan() == null) requestError.add("Pekerjaan");
+        if (validationDTO.getFIDStatusPernikahan() == null) requestError.add("FIDStatusPernikahan");
+        if (validationDTO.getStatusPernikahan() == null) requestError.add("StatusPernikahan");
+        if (validationDTO.getAlamat1() == null) requestError.add("Alamat1");
+
+
+        if (validationDTO.getKodePos() == null) requestError.add("KodePos");
+        if (validationDTO.getKodeKabupatenKota() == null) requestError.add("KodeKabupatenKota");
+        if (validationDTO.getNamaPerusahaanInti() == null) requestError.add("NamaPerusahaanInti");
+        if (validationDTO.getTanggalMulaiUsaha() == null) requestError.add("TanggalMulaiUsaha");
+        if (validationDTO.getNomorIjinUsaha() == null) requestError.add("NomorIjinUsaha");
+        if (validationDTO.getModalUsaha() == null) requestError.add("ModalUsaha");
+        if (validationDTO.getAlamatUsaha() == null) requestError.add("AlamatUsaha");
+        if (validationDTO.getJumlahTenagaKerja() == null) requestError.add("JumlahTenagaKerja");
+        if (validationDTO.getNomorRekeningPinjamanSebelumnya() == null) requestError.add("NomorRekeningPinjamanSebelumnya");
+        if (validationDTO.getNomorPesertaSebelumnya() == null) requestError.add("NomorPesertaSebelumnya");
+
+        if (validationDTO.getNominalPremiSebelumnya() == null) requestError.add("NominalPremiSebelumnya");
+        if (validationDTO.getFIDJenisAgunan() == null) requestError.add("FIDJenisAgunan");
+        if (validationDTO.getFIDAgunan() == null) requestError.add("FIDAgunan");
+        if (validationDTO.getKodeJenisPenggunaan() == null) requestError.add("KodeJenisPenggunaan");
+        if (validationDTO.getKodePosAgunan() == null) requestError.add("KodePosAgunan");
+        if (validationDTO.getAlamatAgunan() == null) requestError.add("AlamatAgunan");
+        if (validationDTO.getTahunAgunan() == null) requestError.add("TahunAgunan");
+        if (validationDTO.getKodeOkupasi() == null) requestError.add("KodeOkupasi");
+        if (validationDTO.getFlagPasar() == null) requestError.add("FlagPasar");
+        if (validationDTO.getKodePasar() == null) requestError.add("KodePasar");
+
+        if (validationDTO.getRangkaBangunan() == null) requestError.add("RangkaBangunan");
+        if (validationDTO.getPenutupAtap() == null) requestError.add("PenutupAtap");
+        if (validationDTO.getBahanLantai() == null) requestError.add("BahanLantai");
+        if (validationDTO.getBahanDinding() == null) requestError.add("BahanDinding");
+        if (validationDTO.getJumlahLantai() == null) requestError.add("JumlahLantai");
+        if (validationDTO.getPlatNomorKendaraan() == null) requestError.add("PlatNomorKendaraan");
+        if (validationDTO.getNomorBuktiKepemilikan() == null) requestError.add("NomorBuktiKepemilikan");
+        if (validationDTO.getNomorRangka() == null) requestError.add("NomorRangk");
+        if (validationDTO.getNomorSeri() == null) requestError.add("NomorSeri");
+        if (validationDTO.getNomorMesin() == null) requestError.add("NomorMesin");
+
+        if (validationDTO.getWarna() == null) requestError.add("Warna");
+        if (validationDTO.getMerkKendaraan() == null) requestError.add("MerkKendaraan");
+        if (validationDTO.getMerkTipeKendaraan() == null) requestError.add("MerkTipeKendaraan");
+        if (validationDTO.getKodeJenisKendaraan() == null) requestError.add("KodeJenisKendaraan");
+        if (validationDTO.getNominalObjekPertanggungan() == null) requestError.add("NominalObjekPertanggunan");
+        if (validationDTO.getNominalObjekPertanggunganValas() == null) requestError.add("NominalObjekPertanggunganValas");
+        if (validationDTO.getCurrency() == null) requestError.add("Currency");
+        if (validationDTO.getNilaiKurs() == null) requestError.add("NilaiKurs");
+        if (validationDTO.getTanggalKurs() == null) requestError.add("TanggalKurs");
+        if (validationDTO.getDeskripsiAgunan() == null) requestError.add("DeskripsiAgunan");
+
+
+        if (validationDTO.getTanggalMulaiChannel() == null) requestError.add("TanggalMulaiChannel");
+        if (validationDTO.getTanggalAkhirChannel() == null) requestError.add("TanggalAkhirChannel");
+        if (validationDTO.getFIDCashVault() == null) requestError.add("FIDCashVault");
+        if (validationDTO.getFIDCashPickup() == null) requestError.add("FIDCashPickup");
+        if (validationDTO.getLokasiResiko() == null) requestError.add("LokasiResiko");
+        if (validationDTO.getKodePosResiko() == null) requestError.add("KodePosResiko");
+        if (validationDTO.getNamaAhliWaris() == null) requestError.add("NamaAhliWaris");
+        if (validationDTO.getTanggalLahirAhliWaris() == null) requestError.add("TanggalLahirAhliWaris");
+        if (validationDTO.getFIDJenisKelaminAhliWaris() == null) requestError.add("FIDJenisKelaminAhliWaris");
+        if (validationDTO.getJenisKelaminAhliWaris() == null) requestError.add("JenisKelaminAhliWaris");
+        if (validationDTO.getAlamatAhliWaris() == null) requestError.add("AlamatAhliWaris");
+        if (validationDTO.getNomorTelpAhliWaris() == null) requestError.add("NomorTelpAhliWaris");
+        if (validationDTO.getFIDHubunganAhliWaris() == null) requestError.add("FIDHubunganAhliWaris");
+        if (validationDTO.getHubunganAhliWaris() == null) requestError.add("HubunganAhliWaris");
+        if (validationDTO.getNomorRekeningSimpanan() == null) requestError.add("NomorRekeningSimpanan");
+        if (validationDTO.getCIFRekeningSimpanan() == null) requestError.add("CIFRekeneningSimpanan");
+        if (validationDTO.getPromoCode() == null) requestError.add("PromoCode");
+        if (validationDTO.getFIDScheduleCoveringNextPremium() == null) requestError.add("FIDScheduleCoveringNextPremium");
+        if (validationDTO.getFIDJenisAsuransi() == null) requestError.add("FIDJenisAsuransi");
+
+        if(!requestError.isEmpty()) {
+            String s = String.join(",", requestError).toString();
+            response.put("error", true);
+            response.put("message", "field request " + s + " tidak ada");
+            return response;
+        }
+
+        response.put("error", false);
+        response.put("message", "success");
+
+        return response;
+    }
